@@ -1,7 +1,7 @@
 # kubernetes
 ## documentation
 ### template
-```https://github.com/bitnami/charts/blob/main/bitnami/haproxy/templates/service.yaml```
+```https://github.com/bitnami/charts/blob/main/bitnami/haproxy/values.yaml```
 ### README
 ```https://github.com/bitnami/charts/tree/main/bitnami/haproxy```
 
