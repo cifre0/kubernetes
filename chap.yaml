@@ -20,3 +20,8 @@ configuration: |
     mode http
     server web1 35.180.219.92:443 check ssl verify none
     http-request set-header Host ercom.cryptobox.com
+ #if containerPort < 1024 add this conf
+ containerSecurityContext:
+  enabled: true
+  runAsUser: 1001
+  runAsNonRoot: false
