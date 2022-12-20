@@ -23,5 +23,5 @@ configuration: |
  #if containerPort < 1024 add this conf
  containerSecurityContext:
   enabled: true
-  runAsUser: 1001
+  runAsUser: 0
   runAsNonRoot: false
