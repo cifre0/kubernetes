@@ -1,0 +1,22 @@
+podLabels:
+    cryptobox.com/app: chap
+    cryptobox.com/stack: cryptobox
+containerPorts:
+  - name: http
+    containerPort: 80
+configuration: |
+  global
+    log stdout format raw local0
+    maxconn 1024
+  defaults
+    log global
+    timeout client 60s
+    timeout connect 60s
+    timeout server 60s
+  frontend fe_main
+    bind :80
+    default_backend be_main
+  backend be_main
+    mode http
+    server web1 35.180.219.92:443 check ssl verify none
+    http-request set-header Host ercom.cryptobox.com
